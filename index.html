@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tema & kelas JS dipasang sebelum render agar tidak ada kedip warna -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+
+  <title>Syifa Aprilia Ayu Wandika — Administrative Staff</title>
+  <meta name="description" content="Portofolio Syifa Aprilia Ayu Wandika, Administrative Staff di Mojokerto, Jawa Timur. Berpengalaman dalam pengelolaan dokumen, pengarsipan, dan pengolahan data.">
+  <meta name="theme-color" content="#0F5B4A">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Syifa Aprilia Ayu Wandika — Administrative Staff">
+  <meta property="og:description" content="Portofolio Administrative Staff: administrasi, pengarsipan dokumen, dan pengolahan data.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.vercel.app/"><!-- EDIT: ganti dengan URL situs setelah di-deploy ke Vercel -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Syifa Aprilia Ayu Wandika — Administrative Staff">
+  <meta name="twitter:description" content="Portofolio Administrative Staff: administrasi, pengarsipan dokumen, dan pengolahan data.">
+
+  <link rel="canonical" href="https://YOUR-DOMAIN.vercel.app/"><!-- EDIT: sama dengan og:url -->
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%230F5B4A'/%3E%3Ctext x='24' y='31' text-anchor='middle' font-family='Arial,sans-serif' font-size='22' font-weight='700' fill='%23C9A34E'%3ES%3C/text%3E%3C/svg%3E">
+
+  <!-- Font: Google Fonts (satu-satunya sumber eksternal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Data terstruktur untuk mesin pencari -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Syifa Aprilia Ayu Wandika",
+    "jobTitle": "Administrative Staff",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mojokerto",
+      "addressRegion": "Jawa Timur",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Tautan lewati navigasi untuk pengguna keyboard -->
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <!-- Navigasi sticky -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda">Syifa Aprilia</a>
+      <ul class="nav-links">
+        <li><a href="#pengalaman">Pengalaman</a></li>
+        <li><a href="#hasil-kerja">Hasil Kerja</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+        <li><a href="#pendidikan">Pendidikan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <!-- Tombol mode terang/gelap (disembunyikan jika JS mati) -->
+      <button class="theme-toggle" type="button" aria-label="Ganti mode terang/gelap">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="konten" class="container" tabindex="-1">
+
+    <!-- HERO: nama, profesi, kalimat pengantar, dan ajakan kontak -->
+    <section id="beranda" class="hero" aria-labelledby="judul-hero">
+      <p class="eyebrow">Administrative Staff</p>
+      <h1 id="judul-hero">Syifa Aprilia Ayu Wandika</h1>
+      <p class="hero-lead">Saya adalah pribadi yang teliti, disiplin, dan bertanggung jawab, dengan pengalaman di bidang administrasi dan pengelolaan dokumen.</p>
+      <p class="hero-summary">Siswi SMK yang memiliki ketertarikan pada bidang administrasi dan perkantoran. Berpengalaman magang 6 bulan di Bagian Kesejahteraan Rakyat Setda Kota Mojokerto dalam pengelolaan dokumen, pengarsipan, pengolahan data, serta pelayanan administrasi. Pribadi yang teliti, disiplin, bertanggung jawab, dan mampu bekerja sama dalam tim.</p>
+      <p class="hero-meta">Mojokerto, Jawa Timur, Indonesia</p>
+      <a class="btn" href="#kontak">Hubungi Saya</a>
+    </section>
+
+    <!-- PENGALAMAN: kartu bisa dibuka-tutup; terbuka secara default -->
+    <section id="pengalaman" class="section reveal" aria-labelledby="judul-pengalaman">
+      <h2 id="judul-pengalaman" class="section-title">Pengalaman</h2>
+
+      <div class="stack">
+        <article class="card exp reveal">
+          <h3 class="exp-heading">
+            <button class="exp-toggle" type="button" aria-expanded="true" aria-controls="exp-pkl">
+              <span class="exp-text">
+                <span class="exp-role">Peserta Praktik Kerja Lapangan (PKL)</span>
+                <span class="exp-org">Bagian Kesejahteraan Rakyat Setda Kota Mojokerto, Mojokerto</span>
+              </span>
+              <span class="exp-period">6 bulan</span><!-- EDIT: isi bulan & tahun mulai–selesai (sekarang hanya "6 bulan") -->
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div id="exp-pkl" class="exp-body">
+            <ul class="bullets">
+              <li>Melakukan pendataan, verifikasi, dan rekapitulasi data peserta pelatihan kerja</li>
+              <li>Membantu pelayanan dan registrasi peserta kegiatan</li>
+              <li>Membantu proses administrasi dan pengelolaan dokumen</li>
+              <li>Melakukan pengarsipan serta penyusunan berkas secara sistematis</li>
+              <li>Melakukan dokumentasi serta menyiapkan perlengkapan kegiatan</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card exp reveal">
+          <h3 class="exp-heading">
+            <button class="exp-toggle" type="button" aria-expanded="true" aria-controls="exp-wasek">
+              <span class="exp-text">
+                <span class="exp-role">Wakil Sekretaris OSIS</span>
+                <span class="exp-org">SMKN 2 Mojokerto</span>
+              </span>
+              <span class="exp-period"></span><!-- EDIT: isi periode kepengurusan -->
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div id="exp-wasek" class="exp-body">
+            <ul class="bullets">
+              <li>Membantu pelaksanaan tugas kesekretariatan organisasi</li>
+              <li>Mendukung koordinasi dan administrasi kegiatan OSIS</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card exp reveal">
+          <h3 class="exp-heading">
+            <button class="exp-toggle" type="button" aria-expanded="true" aria-controls="exp-humas">
+              <span class="exp-text">
+                <span class="exp-role">Koordinator Sekbid 10 (Humas) OSIS</span>
+                <span class="exp-org">SMKN 2 Mojokerto</span>
+              </span>
+              <span class="exp-period"></span><!-- EDIT: isi periode kepengurusan -->
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div id="exp-humas" class="exp-body">
+            <ul class="bullets">
+              <li>Mengoordinasikan kegiatan bidang hubungan masyarakat</li>
+              <li>Menjalin komunikasi dan kerja sama dengan pihak terkait</li>
+              <li>Berpartisipasi dalam pelaksanaan kegiatan sekolah</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTOH HASIL KERJA: kartu teks tanpa gambar -->
+    <section id="hasil-kerja" class="section reveal" aria-labelledby="judul-hasil">
+      <h2 id="judul-hasil" class="section-title">Contoh Hasil Kerja</h2>
+
+      <div class="grid-work">
+        <!-- EDIT: pemetaan foto ke kartu ditebak dari isi foto. Jika ada yang keliru (misal foto PKL dan OSIS tertukar), pindahkan <img> antar kartu. -->
+        <article class="card work reveal">
+          <div class="work-media work-media--2">
+            <img src="assets/img/dokumentasi-1.png" alt="Petugas melayani dan mendata warga di meja pelayanan" loading="lazy">
+            <img src="assets/img/dokumentasi-2.png" alt="Dua peserta memegang berkas dokumen" loading="lazy">
+          </div>
+          <div class="work-body">
+            <p class="kicker">Pengalaman PKL</p>
+            <h3>Administrasi &amp; pendataan peserta</h3>
+            <p>Pengelolaan dokumen dan rekapitulasi data selama PKL.</p>
+          </div>
+        </article>
+
+        <article class="card work reveal">
+          <div class="work-media work-media--2">
+            <img src="assets/img/dokumentasi-3.png" alt="Sekelompok peserta berfoto bersama dengan kartu identitas" loading="lazy">
+            <img src="assets/img/dokumentasi-4.png" alt="Sekelompok peserta berfoto bersama di depan gedung" loading="lazy">
+          </div>
+          <div class="work-body">
+            <p class="kicker">Pengalaman PKL</p>
+            <h3>Dokumentasi kegiatan</h3>
+            <p>Dokumentasi kegiatan dan penyiapan perlengkapan selama PKL.</p>
+          </div>
+        </article>
+
+        <article class="card work reveal">
+          <div class="work-media">
+            <img src="assets/img/dokumentasi-5.png" alt="Sekelompok siswa dan pendamping berfoto bersama di halaman sekolah" loading="lazy">
+          </div>
+          <div class="work-body">
+            <p class="kicker">Kegiatan OSIS</p>
+            <h3>Dokumentasi &amp; administrasi kegiatan</h3>
+            <p>Dokumentasi dan administrasi kegiatan OSIS.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- KEAHLIAN & ALAT -->
+    <section id="keahlian" class="section reveal" aria-labelledby="judul-keahlian">
+      <h2 id="judul-keahlian" class="section-title">Keahlian &amp; Alat</h2>
+
+      <h3 class="sub-title">Keahlian</h3>
+      <ul class="chips">
+        <li>Administrasi perkantoran</li>
+        <li>Pengarsipan dokumen</li>
+        <li>Pengolahan data</li>
+        <li>Komunikasi</li>
+        <li>Public speaking</li>
+        <li>Pelayanan</li>
+        <li>Dokumentasi</li>
+        <li>Manajemen waktu</li>
+        <li>Koordinasi</li>
+        <li>Kerja sama tim</li>
+      </ul>
+
+      <h3 class="sub-title">Alat</h3>
+      <ul class="chips">
+        <li>Microsoft Word</li>
+        <li>Microsoft Excel</li>
+      </ul>
+    </section>
+
+    <!-- PENDIDIKAN & SERTIFIKASI -->
+    <section id="pendidikan" class="section reveal" aria-labelledby="judul-pendidikan">
+      <h2 id="judul-pendidikan" class="section-title">Pendidikan &amp; Sertifikasi</h2>
+
+      <h3 class="sub-title">Pendidikan</h3>
+      <p class="edu-name">SMKN 2 Mojokerto</p><!-- EDIT: isi jurusan & tahun (belum ada di data) -->
+
+      <h3 class="sub-title">Sertifikasi</h3>
+      <p>Belum memiliki sertifikasi profesional.</p>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="section reveal" aria-labelledby="judul-kontak">
+      <h2 id="judul-kontak" class="section-title">Kontak</h2>
+
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:fafaaaadcth@gmail.com">fafaaaadcth@gmail.com</a>
+        </li>
+        <li>
+          <span class="contact-label">Lokasi</span>
+          <span>Mojokerto, Jawa Timur, Indonesia</span>
+        </li>
+        <!-- EDIT: LinkedIn kosong. Isi URL di href, lalu hapus atribut "hidden" agar tautan tampil. -->
+        <li hidden>
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/USERNAME" rel="noopener">linkedin.com/in/USERNAME</a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer sederhana -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Syifa Aprilia Ayu Wandika</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
