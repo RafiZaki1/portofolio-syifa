@@ -1,6 +1,6 @@
 # Portofolio — Syifa Aprilia Ayu Wandika
 
-Portofolio satu halaman untuk melamar posisi **Administrative Staff**. Dibuat dengan HTML, CSS, dan JavaScript murni. Tanpa framework, tanpa build step, tanpa npm.
+Portofolio satu halaman untuk melamar posisi **Pelajar**. Dibuat dengan HTML, CSS, dan JavaScript murni. Tanpa framework, tanpa build step, tanpa npm.
 
 ## Struktur
 
